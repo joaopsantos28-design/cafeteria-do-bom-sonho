@@ -1,0 +1,7 @@
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Plus, UserRound } from 'lucide-react'
+const staff = [['Mia Bigodes','Barista','mia@bomsonho.cafe'],['Theo Gato','Gerente','theo@bomsonho.cafe'],['Luna Patas','Atendente','luna@bomsonho.cafe'],['Nina Ronrom','Caixa','nina@bomsonho.cafe']]
+export default function FuncionariosPage() { return <div className="flex flex-col gap-6"><div className="flex items-end justify-between"><div><p className="text-sm font-semibold text-primary">Equipe</p><h1 className="font-display text-3xl font-800">Funcionários</h1><p className="mt-1 text-sm text-muted-foreground">Acompanhe quem faz o Bom sonho acontecer.</p></div><Button asChild><Link href="/painel/funcionarios/novo"><Plus data-icon="inline-start" /> Novo funcionário</Link></Button></div><div className="grid gap-4 md:grid-cols-2">{staff.map(([name, role, email]) => <Card key={email} className="rounded-2xl"><CardContent className="flex items-center gap-4 p-5"><div className="flex size-12 items-center justify-center rounded-full bg-secondary text-primary"><UserRound /></div><div className="min-w-0"><p className="font-display text-lg font-700">{name}</p><p className="truncate text-sm text-muted-foreground">{email}</p></div><Badge variant="secondary" className="ml-auto">{role}</Badge></CardContent></Card>)}</div></div> }

@@ -17,7 +17,7 @@ export function NavLinks() {
   return (
     <nav className="flex flex-col gap-1.5">
       {LINKS.map(({ href, label, icon: Icon }) => {
-        const active = pathname === href
+        const active = pathname === href || pathname.startsWith(`${href}/`)
         return (
           <Link
             key={href}
