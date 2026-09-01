@@ -1,6 +1,6 @@
-# cafeteria-do-bom-sonho
+# Cafeteria do Bom Sonho — PHP MVC
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Aplicação server-side em PHP 8+, estruturada em MVC, POO, Composer, MySQL e PDO com prepared statements. O ambiente recomendado é o Laravel Herd.
 
 ## Built with v0
 

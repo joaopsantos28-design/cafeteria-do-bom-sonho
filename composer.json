@@ -1,0 +1,8 @@
+{
+  "name": "cafeteria-do-bom-sonho/app",
+  "description": "Sistema MVC da Cafeteria do Bom Sonho",
+  "type": "project",
+  "require": { "php": ">=8.1" },
+  "autoload": { "psr-4": { "App\\": "app/" } },
+  "scripts": { "serve": "php -S localhost:8000 -t public" }
+}
